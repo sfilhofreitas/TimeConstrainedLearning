@@ -1,0 +1,9 @@
+certifi==2019.11.28
+joblib==1.0.1
+scikit-learn==0.24.1
+scipy==1.6.1
+sklearn==0.0
+wincertstore==0.2
+lightgbm==3.1.1 
+numpy==1.20.1
+pandas==1.2.2
