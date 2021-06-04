@@ -137,16 +137,16 @@ def teach(T: Teacher, L: Learner,
 		timer.tock()
 
 		if save_best_learner: 
-			#caso em que todos os exemplos ja foram explorados
-			#forcar retornar o ultimo learner
+			#in which case the learner is trained with all the examples and cannot be evaluated.			
 			if len(new_train_ids) == 0:
+				#In this case, force the choice of this model.
 				current_accuracy = 2.0
 			else:	
 				current_accuracy = T._get_accuracy()
 				current_accuracy -= 1.96*np.sqrt(current_accuracy*(1-current_accuracy)/len(test_ids))
 			
 
-			if (current_accuracy + 0.0000001 >= best_accuracy) and (current_accuracy + 0.0000001 < 2):
+			if (current_accuracy + 0.0000001 >= best_accuracy):
 				best_accuracy = current_accuracy
 				final_learner = deepcopy(L)
 				iter_selected_learner = qtd_iters
