@@ -95,4 +95,4 @@ python main_from_folder.py config_files_LogisticRegression
 ```
 
 
-
+Changes to the alpha parameter (denoted in the code by frac_wrong_increment) can be made in configuration files that start with TCT (for example: TCT_SVMLinearLearner_mnist.conf). More precisely in the fifth line of the configuration files (the files provided use alpha=0.2).
